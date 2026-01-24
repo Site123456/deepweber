@@ -796,5 +796,6 @@ Check [Performance Benchmarks](#-performance-benchmarks) for expected results.
 
 **Built with ❤️ for AI research and domain intelligence**
 
+**Tested and generate more than 350 million working domains found and verified with verifydomain.py repo**
 **Version:** 1.0.1 | **Python:** 3.8+ | **Updated:** 24 JAN 2026
 
