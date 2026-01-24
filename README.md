@@ -796,8 +796,11 @@ Check [Performance Benchmarks](#-performance-benchmarks) for expected results.
 
 **Built with ❤️ for AI research and domain intelligence**
 
-Tested and generated more than 260 million working domains, verified with verifydomain.py repo all in less than 2 runtime days. Data shown for runtime at a 16GB ram and 1 to ssd in async format!
-**Remarks: all subdomains count as 1 domain and all domains with server returned null or not fully accessible by public devices are not counted as working domains!**
+Tested and generated over 260 million valid domains, all verified using the verifydomain.py repository, in under 48 hours of runtime.
+Runtime benchmarks were recorded on a system with 16 GB RAM and a 1 TB SSD, using an asynchronous execution model.
+Remarks:
+• Subdomains are counted as a single domain.
+• Domains returning null responses or not fully accessible to public devices are excluded from the count of working domains.
 
 **Version:** 1.0.1 | **Python:** 3.8+ | **Updated:** 24 JAN 2026
 
