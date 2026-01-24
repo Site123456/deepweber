@@ -803,7 +803,7 @@ Remarks:
 • Domains returning null responses or not fully accessible to public devices are excluded from the count of working domains.
 the survey was done with command:
 ```bash
-python main.py https://example.com --mode async --unlimited
+python main.py https://google.com --mode async --unlimited
 ```
 
 **Version:** 1.0.1 | **Python:** 3.8+ | **Updated:** 24 JAN 2026
