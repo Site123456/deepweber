@@ -480,7 +480,7 @@ A: Yes! Watch log.json during crawl - updates every 10 URLs.
 
 ### Contribute Code
 ```bash
-git clone https://github.com/yourusername/deepweber.git
+git clone https://github.com/Site123456/deepweber.git
 cd deepweber
 git checkout -b feature/my-feature
 # Make changes, test
@@ -491,8 +491,7 @@ git push origin feature/my-feature
 ---
 
 ## 📄 License
-
-**MIT License** - Use freely for research and training
+ - Use freely for research and training
 
 ---
 
@@ -520,5 +519,5 @@ python main.py --help
 
 **Built with ❤️ for AI research and domain intelligence**
 
-**Version:** 2.1.0 | **Python:** 3.8+ | **Status:** Production Ready
+**Version:** 1.0.1 | **Python:** 3.8+ | **Updated:** 24/01/2026
 
