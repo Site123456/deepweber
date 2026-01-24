@@ -1,10 +1,5 @@
 # DEEPWEBER, A Global Domain Crawler
 
-[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com)
-[![Contributions](https://img.shields.io/badge/Contributions-Welcome-blue)](CONTRIBUTING.md)
-
 > **Discover real-world domains at scale.** A powerful web crawler designed to collect live domain data for training machine learning models with authentic web infrastructure information.
 
 ---
