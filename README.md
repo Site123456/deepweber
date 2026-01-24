@@ -797,7 +797,7 @@ Check [Performance Benchmarks](#-performance-benchmarks) for expected results.
 **Built with ❤️ for AI research and domain intelligence**
 
 Tested and generated over 260 million valid domains, all verified using the verifydomain.py repository, in under 48 hours of runtime.
-Runtime benchmarks were recorded on a system with 600 thread, 16 GB RAM and a 1 TB SSD device using the async execution model.
+Runtime benchmarks were recorded on a system with 128 threads, 16 GB RAM and a 1 TB SSD device using the async execution model.
 Remarks:
 • Subdomains are counted as a single domain.
 • Domains returning null responses or not fully accessible to public devices are excluded from the count of working domains.
