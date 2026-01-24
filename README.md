@@ -106,7 +106,7 @@ Choose the profile matching your system. Configuration shows actual `main.py` va
 | 2GB RAM, 2 cores | [MINIMAL](#minimal-profile) | 4 threads, 50 batch | 2-5 URLs/s | N/A |
 | 4GB RAM, 4 cores | [STANDARD](#standard-profile) | 16 threads, 200 batch | 8-25 URLs/s | 4-6h |
 | **8GB RAM, 8+ cores** ✅ | [PERFORMANCE](#performance-profile) | 64 threads, 500 batch | 25-40 URLs/s | **2-3h** |
-| 16GB+ RAM, 16+ cores | [ULTRA](#ultra-profile) | 128 threads, 1K batch | 50-100+ URLs/s | 5-60m |
+| 16GB+ RAM, 16+ cores | [ULTRA](#ultra-profile) | 128 threads, 1K batch | 50-100+ URLs/s | 5-60min |
 
 ---
 
