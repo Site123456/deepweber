@@ -1,6 +1,8 @@
 # 🌐 DEEPWEBER - Global Domain Crawler
 
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)](#status)
+
+---
 Minimum Requirements:
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Memory](https://img.shields.io/badge/Memory-8GB-blue)](#system-requirements)
