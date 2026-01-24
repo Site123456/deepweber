@@ -801,6 +801,10 @@ Runtime benchmarks were recorded on a system with 16 GB RAM and a 1 TB SSD, usin
 Remarks:
 • Subdomains are counted as a single domain.
 • Domains returning null responses or not fully accessible to public devices are excluded from the count of working domains.
+the survey was done with command:
+```bash
+python main.py https://example.com --mode async --unlimited
+```
 
 **Version:** 1.0.1 | **Python:** 3.8+ | **Updated:** 24 JAN 2026
 
