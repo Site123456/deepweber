@@ -1,0 +1,83 @@
+# ============================================================================
+# DEEPWEBER - Global Domain Crawler
+# Requirements: Python 3.8+
+# ============================================================================
+
+# Core Dependencies (Required)
+requests==2.31.0              # HTTP client for web requests
+beautifulsoup4==4.12.2        # HTML/XML parsing and scraping
+aiohttp==3.9.1                # Async HTTP client for fast crawling
+tqdm==4.66.1                  # Progress bars for user feedback
+psutil==5.9.6                 # System/memory monitoring
+
+# Optional: Development & Testing this will not be published to users
+# Uncomment to use for development
+
+# Code Quality & Linting
+# black==23.12.1              # Code formatter
+# flake8==6.1.0               # Linting
+# pylint==3.0.3               # Code analysis
+# isort==5.13.2               # Import sorting
+
+# Testing
+# pytest==7.4.3               # Testing framework
+# pytest-asyncio==0.21.1      # Async test support
+# pytest-cov==4.1.0           # Code coverage
+
+# Documentation
+# sphinx==7.2.6               # Documentation generator
+# sphinx-rtd-theme==2.0.0     # ReadTheDocs theme
+
+# ============================================================================
+# Installation Instructions:
+# ============================================================================
+#
+# 1. Basic Installation (for users):
+#    pip install -r requirements.txt
+#
+# 2. Development Installation (for contributors):
+#    pip install -r requirements.txt black flake8 pytest pytest-asyncio
+#
+# 3. Verify Installation:
+#    python main.py --help
+#
+# ============================================================================
+# Dependency Details:
+# ============================================================================
+#
+# requests (2.31.0)
+#   - Synchronous HTTP requests
+#   - Used in sync crawler mode
+#   - Stable, reliable HTTP client
+#
+# beautifulsoup4 (4.12.2)
+#   - HTML parsing and link extraction
+#   - Advanced link detection (8+ extraction methods)
+#   - Supports lxml parser fallback
+#
+# aiohttp (3.9.1)
+#   - Asynchronous HTTP client
+#   - Used in async crawler mode (2-3x faster)
+#   - Connection pooling for concurrent requests
+#
+# tqdm (4.66.1)
+#   - Progress bar visualization
+#   - Real-time crawl progress tracking
+#   - User-friendly feedback
+#
+# psutil (5.9.6)
+#   - System resource monitoring
+#   - Memory usage tracking (8GB limit)
+#   - Process management
+#
+# ============================================================================
+# Minimum Requirements:
+# ============================================================================
+#
+# Python:     3.8+ (3.13+ compatible)
+# RAM:        2GB minimum (8GB recommended)
+# Disk:       500MB free space
+# Internet:   Stable connection
+#
+# ============================================================================
+
