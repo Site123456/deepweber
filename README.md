@@ -797,7 +797,7 @@ Check [Performance Benchmarks](#-performance-benchmarks) for expected results.
 **Built with ❤️ for AI research and domain intelligence**
 
 Tested and generated more than 260 million working domains, verified with verifydomain.py repo all in less than 2 runtime days.
-**Remarks: Most domain with server returned null are not fully accessible by all devices, therefore not counted as working domains!**
+**Remarks: all subdomains count as 1 domain and all domains with server returned null or not fully accessible by public devices are not counted as working domains!**
 
 **Version:** 1.0.1 | **Python:** 3.8+ | **Updated:** 24 JAN 2026
 
