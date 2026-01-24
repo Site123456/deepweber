@@ -778,15 +778,11 @@ python main.py https://example.com --mode async --unlimited
 
 ## 📄 License
 
-MIT License - Free for personal and commercial use
+MIT License - Free to use or modify for personal and commercial use
 
 ---
 
 ## 🎉 You're Ready!
-
-**Your System:** 8GB RAM, 10GB SSD, 8+ cores ✅  
-**Profile:** PERFORMANCE  
-**Status:** Production Ready
 
 **Start crawling:**
 ```bash
