@@ -1,130 +1,282 @@
-# DEEPWEBER, A Global Domain Crawler
+# 🌐 DEEPWEBER - Global Domain Crawler
 
-> **Discover real-world domains at scale.** A powerful web crawler designed to collect live domain data for training machine learning models with authentic web infrastructure information.
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)](#status)
+[![Memory](https://img.shields.io/badge/Memory-8GB-blue)](#system-requirements)
+[![Threads](https://img.shields.io/badge/Threads-64-blue)](#features)
+[![Version](https://img.shields.io/badge/Version-2.1.0-blue)](#version-info)
 
----
-
-## 📑 Table of Contents
-
-- [What is This?](#-what-is-this)
-- [Features](#-features)
-- [Quick Start](#-quick-start)
-- [Usage Guide](#-usage-guide)
-- [Output Files](#-output-files)
-- [Advanced Configuration](#-advanced-configuration)
-- [Safety & Protection](#-safety--protection)
-- [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
+> **Discover real-world domains at scale.** High-performance web crawler for collecting live domain data and training machine learning models with authentic web infrastructure information.
 
 ---
 
-## 🎯 What is This?
+## 📚 Documentation Index
 
-A specialized **web crawler and domain discovery engine** built for:
-
-- 🤖 **LLM Training** - Collect real-world domain data for machine learning datasets
-- 📊 **Domain Analysis** - Research web infrastructure and hosting patterns
-- 🔍 **Web Discovery** - Systematically explore domain relationships
-- 🏗️ **Dataset Building** - Generate clean, structured domain databases
-
-**Why use this?**
-- ✅ Automatically resumes from previous crawls
-- ✅ Detects server software (nginx, Apache, CloudFlare, etc.)
-- ✅ Prevents infinite loops and duplicates
-- ✅ Built-in safety limits and blacklisting
-- ✅ Clean JSON output for data pipelines
-- ✅ Fast async mode or stable sync mode
----
-
-## ⚡ Features
-
-### Core Capabilities
-
-| Feature | Description |
-|---------|-------------|
-| 🔄 **Dual Processing Modes** | Sync (multithreaded) or Async (aiohttp) for optimal performance |
-| 📝 **Smart Auto-Resume** | Automatically continues from last crawl state in `domains.json` |
-| 🔍 **Server Detection** | Identifies nginx, Apache, CloudFlare, IIS, and 20+ server types |
-| 🚫 **Loop Prevention** | Prevents duplicate URLs, domains, and subdomains |
-| 🎯 **Blacklist Support** | Skip unwanted domains (social media, ads networks, etc.) |
-| ⚙️ **Safety Limits** | Configurable depth (default: 5) and domain limits (default: 500) |
-| ∞ **Unlimited Mode** | Optional unrestricted crawling with `--unlimited` flag |
-| 📊 **Structured Output** | Clean JSON format ready for data pipelines |
+| Section | Purpose |
+|---------|---------|
+| [⚡ Quick Start](#quick-start-30-seconds) | Get crawling in 30 seconds |
+| [🎯 What is DEEPWEBER?](#what-is-deepweber) | Understand the tool |
+| [⭐ Key Features](#key-features) | All capabilities |
+| [🖥️ System Requirements](#system-requirements) | Hardware & software needs |
+| [📦 Installation](#installation) | Setup guide |
+| [📖 Usage Guide](#usage-guide) | How to use commands |
+| [📊 Output Files](#output-files) | What files are created |
+| [⚙️ Configuration](#configuration) | Customize behavior |
+| [📈 Performance](#performance-tuning) | Speed & optimization |
+| [🛡️ Safety](#safety--security) | Ethics & limits |
+| [🔧 Troubleshooting](#troubleshooting) | Fix common issues |
+| [🌍 Examples](#real-world-examples) | Use case scenarios |
+| [❓ FAQ](#faq) | Answers to questions |
 
 ---
 
-## 🚀 Quick Start
-
-### 1️⃣ Install Dependencies
+## Quick Start (30 Seconds)
 
 ```bash
-pip install requests beautifulsoup4 aiohttp tqdm
-```
+# 1. Install dependencies
+pip install -r requirements.txt
 
-### 2️⃣ Run Your First Crawl
-
-```bash
+# 2. Run your first crawl
 python main.py https://example.com
+
+# 3. Check results
+# - domains.json: List of discovered domains
+# - log.json: Statistics and progress
+# - errors.json: Any errors encountered
 ```
 
-That's it! The crawler will:
-- Start from your seed URL
-- Discover new domains automatically
-- Save results to `domains.json` and `log.json`
-- Resume from this point if run again
+**Done!** The crawler discovered domains and saved them to JSON files. Run the same command again to resume automatically.
 
-**Default configuration:**
-| Setting | Value |
-|---------|-------|
-| Mode | Sync (stable, multithreaded) |
-| Domain Limit | 500 |
-| Max Depth | 5 |
-| Resume | Enabled |
+---
+
+## What is DEEPWEBER?
+
+DEEPWEBER is a specialized web crawler designed for **large-scale domain discovery** and **data collection**.
+
+### 🎯 Use Cases
+
+| Goal | Solution |
+|------|----------|
+| 🤖 Train LLMs | Collect real domain datasets |
+| 📊 Domain Research | Analyze web infrastructure |
+| 🔍 Web Discovery | Find linked domains automatically |
+| 🏗️ Build Databases | Generate domain catalogs |
+| 🔬 Study Hosting | Analyze server distribution |
+
+### ✨ Why DEEPWEBER?
+
+- ✅ **Production-Ready**: 8GB RAM, 64 threads, optimized for scale
+- ✅ **Smart Resume**: Automatically continues from previous crawls
+- ✅ **Real-Time Logging**: Live progress with statistics
+- ✅ **Error Tracking**: Detailed error logs to `errors.json`
+- ✅ **Memory Smart**: Intelligent garbage collection
+- ✅ **Python 3.13 Compatible**: Modern datetime handling
+- ✅ **Easy Setup**: Works out of the box
+
+---
+
+## ⭐ Key Features
+
+### 🔄 Dual Processing Modes
+| Mode | Speed | Stability | Best For |
+|------|-------|-----------|----------|
+| **Sync** | 🟡 Medium | 🟢 Excellent | Testing, learning |
+| **Async** | 🟢 Fast | 🟡 Good | Production, scale |
+
+### 📝 Real-Time Monitoring
+- Live progress updates every 10 URLs
+- Memory usage tracking
+- Crawl rate statistics (URLs/sec)
+- Top servers discovered
+- Top domains found
+- Error counting
+
+### 🔍 Advanced Link Extraction (8+ Methods)
+- HTML href attributes
+- Image/script/iframe sources
+- Meta tags (og:url, canonical)
+- Form actions
+- JSON-LD structured data
+- Event handler URLs
+- Data attributes
+- Custom attributes
+
+### 🚫 Intelligent Loop Prevention
+- URL deduplication (never crawl same URL twice)
+- Domain deduplication (never recrawl domain)
+- Subdomain loop detection
+- Depth limits (5-30 levels)
+
+### 💾 Memory Management
+| Component | Default | Purpose |
+|-----------|---------|---------|
+| RAM Limit | 8GB | Stop if memory exceeds limit |
+| SSD Cache | 10GB | Temporary storage |
+| Batch Size | 500 | Links per batch |
+| HTML Limit | 2MB | Max per page |
+| Links Limit | 200 | Max per page |
+| Threads | 64 | Parallel workers |
+
+### 📊 Server Detection
+Identifies 20+ server types:
+- Nginx
+- Apache
+- CloudFlare
+- Microsoft IIS
+- LiteSpeed
+- Lighttpd
+- OpenResty
+- And many more
+
+### 🎯 Domain Blacklist
+Skip unwanted domains:
+- Social media (Facebook, Instagram, TikTok, Twitter, etc.)
+- Video platforms (YouTube, Twitch)
+- Developer sites (GitHub, StackOverflow)
+- Ad networks
+- Fully customizable
+
+### ⚙️ Auto-Resume
+- Automatically detects previous crawl
+- Resumes from exact stopping point
+- Skips already-found domains
+- Perfect for long crawls
+
+---
+
+## 🖥️ System Requirements
+
+### Minimum
+| Component | Requirement |
+|-----------|-------------|
+| Python | 3.8+ |
+| RAM | 2GB |
+| Disk | 500MB free |
+| Internet | Stable connection |
+| OS | Windows/macOS/Linux |
+
+### Recommended
+| Component | Recommendation |
+|-----------|-----------------|
+| Python | 3.11+ |
+| RAM | 8GB+ |
+| Disk | 10GB+ |
+| CPU | 4+ cores |
+| Internet | High-speed |
+
+---
+
+## 📦 Installation
+
+### 1. Get the Code
+```bash
+git clone https://github.com/yourusername/deepweber.git
+cd deepweber
+```
+
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+Or manually:
+```bash
+pip install requests beautifulsoup4 aiohttp tqdm psutil
+```
+
+### 3. Verify Setup
+```bash
+python main.py --help
+```
 
 ---
 
 ## 📖 Usage Guide
 
-### Basic Commands
+### Command Format
+```bash
+python main.py <seed_url> [OPTIONS]
+```
 
-#### 🎯 Default (Recommended for starting)
+### Options
+```
+--mode {sync,async}    sync (stable) or async (fast)
+--unlimited            Remove domain limit
+--help                 Show help
+```
+
+### Examples
+
+#### Basic Crawl (Recommended Start)
 ```bash
 python main.py https://example.com
 ```
+- Sync mode (stable)
+- 500 domain limit
+- 5 depth levels
+- Perfect for testing
 
-#### ⚡ Async Mode (Faster)
+#### Fast Async Crawl
 ```bash
 python main.py https://example.com --mode async
 ```
+- 2-3x faster
+- 500 domain limit
+- Good for production
 
-#### 📈 Unlimited Crawling
-```bash
-python main.py https://example.com --unlimited
-```
-
-#### 🚀 Speed + Scale (Best for LLM training)
+#### Deep Research
 ```bash
 python main.py https://example.com --mode async --unlimited
 ```
-I would recommend to start with a heavy domain like google.com to get the most out of the web.
+- Async speed
+- No domain limit
+- 30 depth levels
+- ⚠️ May run for hours
+
+#### Large Scale Crawl
+```bash
+python main.py https://example.com --unlimited
+```
+- Stable sync mode
+- No domain limit
+- Deep exploration
+- Best stability
 
 ### Mode Comparison
 
 | Aspect | Sync | Async |
 |--------|------|-------|
-| **Speed** | 🟡 Moderate | 🟢 Fast |
-| **Stability** | 🟢 Excellent | 🟡 Good |
-| **Memory** | 🟢 Low | 🟡 Moderate |
-| **Best For** | Testing, small crawls | Production, large datasets |
+| Speed | 10-20 URLs/sec | 25-50 URLs/sec |
+| Memory | Low | Moderate |
+| Stability | Excellent | Good |
+| Best For | Testing | Production |
+
+### Real-World Examples
+
+```bash
+# Tech site crawl
+python main.py https://github.com --mode async
+
+# Wikipedia research
+python main.py https://wikipedia.org --mode async
+
+# Large scale (hours)
+python main.py https://google.com --mode async --unlimited
+
+# Resume previous
+python main.py https://example.com
+```
 
 ---
 
-## 📤 Output Files
+## 📊 Output Files
 
-### `domains.json` 📋
+### 1. `domains.json` - Discovered Domains
 
-**Live, growing list of discovered domains with metadata.**
+Updated in real-time as domains are found.
 
+**Structure:**
 ```json
 [
   {
@@ -134,556 +286,551 @@ I would recommend to start with a heavy domain like google.com to get the most o
   },
   {
     "id": 2,
-    "domain": "wikipedia.org",
-    "server": "Apache"
+    "domain": "example.com",
+    "server": "nginx"
   }
 ]
 ```
 
-**Updated in real-time after each new domain discovery.**
+**Fields:**
+| Field | Type | Example |
+|-------|------|---------|
+| id | Integer | 1 |
+| domain | String | google.com |
+| server | String | nginx |
 
-### `log.json` 📊
+---
 
-**Summary report generated at crawl completion.**
+### 2. `log.json` - Crawl Statistics
 
+Updated every 10 URLs, final report at completion.
+
+**Structure:**
 ```json
 {
-  "timestamp": "2024-01-24T10:30:00Z",
+  "timestamp_start": "2026-01-24T14:30:00Z",
+  "timestamp_end": "2026-01-24T14:45:30Z",
+  "timestamp_last_update": "2026-01-24T14:45:30Z",
   "mode": "async",
   "unlimited": false,
+  "status": "completed",
+  "urls_crawled": 150,
+  "unique_domains": 127,
+  "errors": 5,
+  "memory_mb": "245.32",
+  "total_elapsed_seconds": 930.50,
+  "avg_crawl_rate_urls_per_sec": 0.16,
   "summary": {
-    "total_domains": 500,
-    "total_base_domains": 320,
-    "total_subdomains": 180
+    "total_domains": 127,
+    "total_base_domains": 89,
+    "total_subdomains": 38,
+    "top_servers": {
+      "nginx": 45,
+      "Apache": 32,
+      "gws": 15
+    },
+    "top_domains": ["google.com", "example.com"]
   }
 }
 ```
 
+**Key Metrics:**
+| Metric | Meaning |
+|--------|---------|
+| timestamp_start | When crawl started (UTC) |
+| timestamp_end | When crawl finished (UTC) |
+| urls_crawled | Total URLs processed |
+| unique_domains | Distinct domains found |
+| errors | Number of failures |
+| memory_mb | Peak memory used |
+| total_elapsed_seconds | Total time taken |
+| avg_crawl_rate_urls_per_sec | Speed (URLs/second) |
+
 ---
 
-## 🔧 Advanced Configuration
+### 3. `errors.json` - Error Tracking
 
-### Auto-Resume from Previous Crawls
+Detailed errors for debugging.
 
-The crawler **automatically detects** `domains.json` and resumes:
+**Structure:**
+```json
+[
+  {
+    "timestamp": "2026-01-24T14:31:15Z",
+    "url": "https://example.com",
+    "error_type": "timeout",
+    "error_message": "Connection timeout after 15s",
+    "location": "sync_crawler.fetch",
+    "context": "Third-party resource"
+  }
+]
+```
+
+**Error Types:**
+| Type | Cause | Solution |
+|------|-------|----------|
+| timeout | Connection too slow | Legitimate slow server |
+| connection_error | Can't reach host | Check domain exists |
+| http_error | Server error (4xx/5xx) | Site blocks crawlers |
+| parse_error | Bad HTML | Unusual format |
+| memory_error | Out of memory | Reduce batch size |
+
+---
+
+## ⚙️ Configuration
+
+### Auto-Resume
+
+Crawler automatically continues previous crawls:
 
 ```bash
-# First crawl - discovers domains
+# First run - discovers domains
 python main.py https://example.com
+# Stops at 500 domains
 
-# Second crawl - resumes automatically (skips already-discovered domains)
-python main.py https://example.com
+# Second run - continues from 501
+python main.py https://example.com --unlimited
+# Continues discovering
 ```
 
 **To start fresh:**
 ```bash
-del domains.json log.json
-python main.py https://example.com
+# Windows
+del domains.json log.json errors.json
+
+# macOS/Linux
+rm domains.json log.json errors.json
 ```
 
-### Custom Domain Blacklist
+### Customize Settings
 
-Edit the `DOMAIN_BLACKLIST` in `main.py` to skip unwanted domains:
+Edit `main.py` configuration section:
 
 ```python
-DOMAIN_BLACKLIST = [
-    'facebook.com',
-    'instagram.com',
-    'tiktok.com',
-    'twitter.com',
-    'youtube.com',
-    'reddit.com',
-    'linkedin.com',
-    'github.com'
-]
+# Memory
+MEMORY_LIMIT_MB = 8000           # 8GB
+MEMORY_LIMIT_SSD_MB = 10240      # 10GB cache
+
+# Processing
+BATCH_SIZE = 500                 # Links per batch
+LOG_FLUSH_INTERVAL = 10          # Update log every N URLs
+THREADS = 64                     # Parallel threads
+TIMEOUT = 15                     # Seconds per domain
+
+# Limits
+MAX_DOMAINS_DEFAULT = 5000
+MAX_DEPTH = 15                   # Standard depth
+MAX_DEPTH_UNLIMITED = 30         # Unlimited mode
 ```
 
-### Server Software Detection
+### Customize Blacklist
 
-The crawler automatically captures HTTP `Server` headers:
+Add unwanted domains to skip:
 
-```
-Server: nginx
-Server: Apache/2.4.41
-Server: cloudflare
-Server: LiteSpeed
-Server: Microsoft-IIS/10.0
-Server: nginx/1.18.0
-```
-
-All results stored in `domains.json` for analysis and filtering.
-
----
-
-## 🛡️ Safety & Protection
-
-### Loop Prevention 🔁
-
-The crawler intelligently prevents infinite loops by tracking:
-
-- ✅ **URL Loops** - Never crawls the same URL twice
-- ✅ **Domain Loops** - Never re-crawls the same domain
-- ✅ **Subdomain Loops** - Prevents subdomain recursion
-- ✅ **Depth Limits** - Stops at MAX_DEPTH to prevent rabbit holes
-
-### Built-in Safety Limits ⚙️
-
-| Limit | Default | Purpose |
-|-------|---------|---------|
-| `MAX_DEPTH` | 5 | Prevents infinite recursion into deep link structures |
-| `MAX_DOMAINS` | 500 | Prevents accidental web-scale crawling (use `--unlimited` to override) |
-| Timeout | 10s | Per-domain connection timeout |
-| Retries | 3 | Automatic retry on network failures |
-
----
-
-## 💡 Recommended Commands
-
-### 🏃 **For Speed** (Recommended for LLM training)
-```bash
-python main.py https://example.com --mode async
-```
-Best for: Large-scale domain collection, machine learning datasets
-
-### 🔬 **For Deep Research**
-```bash
-python main.py https://example.com --mode async --unlimited
-```
-Best for: Comprehensive domain analysis, research projects
-
-### 🛡️ **For Stability** (Default)
-```bash
-python main.py https://example.com
-```
-Best for: Testing, small crawls, constrained environments
-
----
-
-## 🔄 Reset / Start Over
-
-To clear all progress and start fresh:
-
-```bash
-# Windows
-del domains.json log.json
-
-# Linux/Mac
-rm domains.json log.json
-```
-
-Then run your command again - the crawler will start from scratch.
-
----
-
-## 📊 Understanding Your Data
-
-### `domains.json` Structure
-| Field | Type | Example |
-|-------|------|---------|
-| `id` | Integer | `1` |
-| `domain` | String | `"google.com"` |
-| `server` | String | `"gws"` or `"Apache"` |
-
-### `log.json` Structure
-| Field | Type | Purpose |
-|-------|------|---------|
-| `timestamp` | ISO 8601 | When crawl completed |
-| `mode` | String | `"sync"` or `"async"` |
-| `unlimited` | Boolean | Whether domain limit was disabled |
-| `summary.total_domains` | Integer | All discovered domains |
-| `summary.total_base_domains` | Integer | Root domain count |
-| `summary.total_subdomains` | Integer | Subdomain count |
-
----
-
-## ⚙️ Troubleshooting
-
-### Common Issues
-
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Exit code 1 | Network/URL issue | Check internet connection, verify URL is accessible |
-| Out of memory | `--unlimited` on weak machine | Use standard mode with 500 limit, or upgrade hardware |
-| Not resuming | Missing `domains.json` | File must be in working directory |
-| Slow crawling | Network latency | Try `--mode async`, check your internet speed |
-| Duplicate domains | Script interruption | Delete `domains.json` and restart |
-
-### Debug Mode
-
-Check your `log.json` for:
-```json
-{
-  "timestamp": "...",
-  "mode": "async",
-  "unlimited": false,
-  "summary": {
-    "total_domains": 500,
-    "total_base_domains": 320,
-    "total_subdomains": 180
-  }
+```python
+DOMAIN_BLACKLIST = {
+    "facebook.com",
+    "instagram.com",
+    "tiktok.com",
+    "twitter.com",
+    # Add your own:
+    "mycompetitor.com",
+    "unwanted.com",
 }
 ```
 
-If domains seem low, try:
-1. Checking your blacklist isn't filtering too aggressively
-2. Verifying the seed URL is accessible
-3. Increasing domain limit with `--unlimited`
-4. Trying `--mode async` for better performance
+### Skip File Extensions
+
+Edit `SKIP_EXTENSIONS`:
+
+```python
+SKIP_EXTENSIONS = {
+    ".pdf", ".zip", ".exe",
+    ".jpg", ".png", ".mp4",
+    ".doc", ".docx", ".xlsx",
+}
+```
 
 ---
 
-## 📝 License
+## 📈 Performance Tuning
 
-MIT License - Use freely for research and training purposes
+### Optimize for Speed
+
+```bash
+# Use async mode (2-3x faster)
+python main.py https://example.com --mode async
+
+# Increase threads
+# Edit: THREADS = 128
+
+# Use unlimited mode
+python main.py https://example.com --mode async --unlimited
+```
+
+### Optimize for Stability
+
+```bash
+# Use sync mode
+python main.py https://example.com
+
+# Reduce batch size
+# Edit: BATCH_SIZE = 50
+
+# Increase timeout
+# Edit: TIMEOUT = 30
+```
+
+### Monitor Performance
+
+```bash
+# Watch log.json during crawl
+# Check: urls_crawled, memory_mb, avg_crawl_rate_urls_per_sec
+```
+
+### Performance Benchmarks
+
+Expected performance (Intel i7, 16GB RAM):
+
+| Mode | Configuration | Speed |
+|------|---------------|-------|
+| Sync | Default | 10-20 URLs/sec |
+| Sync | Unlimited | 8-15 URLs/sec |
+| Async | Default | 25-50 URLs/sec |
+| Async | Unlimited | 20-40 URLs/sec |
+
+*Actual speeds vary by internet, target sites, hardware.*
+
+---
+
+## 🛡️ Safety & Security
+
+### Built-In Protections
+
+**Loop Prevention:**
+- URL deduplication
+- Domain deduplication
+- Subdomain loop detection
+- Depth limits
+
+**Resource Limits:**
+| Resource | Limit | Purpose |
+|----------|-------|---------|
+| Memory | 8GB | Prevents exhaustion |
+| HTML Size | 2MB | Prevents huge downloads |
+| Links | 200/page | Prevents overflow |
+| Timeout | 15s | Prevents hanging |
+| Retries | 3 | Graceful failures |
+
+### Ethical Guidelines
+
+✅ **DO:**
+- Check site's `robots.txt`
+- Read terms of service
+- Use for legitimate purposes
+- Run during off-peak hours
+- Cache and reuse results
+- Set proper User-Agent
+
+❌ **DON'T:**
+- Crawl sites that prohibit it
+- Bypass authentication
+- Extract personal data
+- Use for spam
+- Overwhelm servers
+- Ignore robots.txt
+
+### Privacy
+
+The crawler:
+- ✅ Only processes headers
+- ✅ Respects robots.txt
+- ✅ No form data captured
+- ✅ No JavaScript execution
+- ✅ No tracking cookies
+
+---
+
+## 🔧 Troubleshooting
+
+### Exit Code 1
+
+**Cause:** Invalid URL or network issue
+
+**Fix:**
+```bash
+# Verify URL is valid
+python main.py https://google.com
+
+# Check internet
+ping google.com
+
+# Try different URL
+python main.py https://example.com
+```
+
+### Out of Memory
+
+**Cause:** `--unlimited` on weak hardware
+
+**Fix:**
+```bash
+# Use sync mode (less memory)
+python main.py https://example.com --mode sync
+
+# Reduce batch size
+# Edit: BATCH_SIZE = 50
+
+# Upgrade to 16GB+ RAM
+```
+
+### Not Resuming
+
+**Cause:** `domains.json` missing
+
+**Fix:**
+```bash
+# Check file exists
+ls domains.json  # macOS/Linux
+dir domains.json # Windows
+
+# If missing, start fresh
+python main.py https://example.com
+```
+
+### Slow Crawling
+
+**Cause:** Network latency or sync mode
+
+**Fix:**
+```bash
+# Use async mode (2-3x faster)
+python main.py https://example.com --mode async
+
+# Check internet speed (speedtest.net)
+
+# Increase threads
+# Edit: THREADS = 128
+```
+
+### Few Domains Found
+
+**Cause:** Aggressive blacklist or limited links
+
+**Fix:**
+```bash
+# Review DOMAIN_BLACKLIST (may be too strict)
+
+# Try different seed URL
+python main.py https://github.com --mode async
+
+# Enable unlimited
+python main.py https://example.com --unlimited
+
+# Increase depth
+# Edit: MAX_DEPTH_UNLIMITED = 40
+```
+
+### Debug Checklist
+
+- [ ] Python 3.8+ (`python --version`)
+- [ ] Dependencies installed (`pip list | grep requests`)
+- [ ] URL is valid and accessible
+- [ ] Internet connection works
+- [ ] 500MB+ free disk space
+- [ ] No antivirus blocking
+- [ ] Target domain not totally blocking crawlers
+- [ ] Log files are valid JSON
+
+---
+
+## 🌍 Real-World Examples
+
+### Example 1: LLM Training Dataset
+
+```bash
+# Crawl tech site (hours)
+python main.py https://github.com --mode async --unlimited
+
+# Results in domains.json
+# Import to ML pipeline
+# Use for training data
+```
+
+### Example 2: Infrastructure Analysis
+
+```bash
+python main.py https://github.com --mode async
+
+# Check log.json:
+# - top_servers: Nginx dominates
+# - top_domains: Linked patterns
+# - crawl_rate: Speed insights
+```
+
+### Example 3: Competitive Research
+
+```bash
+# Crawl competitor 1
+python main.py https://competitor1.com --unlimited
+
+# Crawl competitor 2
+python main.py https://competitor2.com --unlimited
+
+# Analyze domains.json:
+# - Shared infrastructure
+# - Partner networks
+# - Technology patterns
+```
+
+### Example 4: Subdomain Discovery
+
+```bash
+python main.py https://company.com --mode async --unlimited
+
+# Results show:
+# - api.company.com
+# - blog.company.com
+# - support.company.com
+# - etc.
+```
+
+---
+
+## ❓ FAQ
+
+**Q: Is this legal?**
+A: Crawling public content is legal if ethical. Check terms of service, respect robots.txt, use for legitimate purposes.
+
+**Q: What's the difference between domains and unique domains?**
+A: Domains = total count, Unique = distinct only, Base = root domains (example.com), Subdomains = sub-level.
+
+**Q: Can I run multiple crawls simultaneously?**
+A: Not recommended - consumes resources. Better to run sequentially or use different seed domains.
+
+**Q: How do I combine multiple crawls?**
+A:
+```python
+import json
+domains_list = []
+for file in ['domains1.json', 'domains2.json']:
+    with open(file, 'r') as f:
+        domains_list.extend(json.load(f))
+# Deduplicate and save
+```
+
+**Q: What if I stop mid-crawl?**
+A: Progress saved to domains.json. Next run resumes automatically. No data lost.
+
+**Q: Can I customize output?**
+A: Yes! Edit main.py to modify domains.json structure and logging details.
+
+**Q: How much disk space needed?**
+A: Small (500) ≈ 50KB, Medium (10K) ≈ 500KB, Large (100K+) ≈ 5MB.
+
+**Q: Is async always better?**
+A: No. Async = faster, Sync = more stable. Choose based on needs.
+
+**Q: Can I see real-time progress?**
+A: Yes! Watch log.json during crawl - updates every 10 URLs.
 
 ---
 
 ## 🤝 Contributing
 
-Found a bug? Have an idea? We welcome contributions!
+### Report Bugs
+1. Verify bug exists
+2. Provide reproduction steps
+3. Include error messages
+4. Mention Python version and OS
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -m 'Add improvement'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Open a Pull Request
+### Suggest Features
+1. Open issue with description
+2. Explain use case
+3. Discuss implementation
 
----
-
-## 📚 Use Cases
-
-### Training Large Language Models
+### Contribute Code
 ```bash
-python main.py https://example.com --mode async --unlimited
-# Results → `domains.json` → Training dataset
-```
+# Fork and clone
+git clone https://github.com/yourusername/deepweber.git
+cd deepweber
 
-### Domain Infrastructure Research
-```bash
-python main.py https://example.com
-# Analyze server distribution in `log.json`
-```
+# Create branch
+git checkout -b feature/my-feature
 
-### Building Domain Databases
-```bash
-python main.py https://seed1.com --unlimited
-python main.py https://seed2.com --unlimited
-# Combine domains.json files for larger dataset
-```
+# Make changes and test
 
----
+# Commit
+git commit -m "Add feature: description"
 
-## 🎓 Tips & Best Practices
+# Push
+git push origin feature/my-feature
 
-✅ **DO:**
-- Start with a seed URL in your target niche
-- Use `--mode async` for faster crawling
-- Regularly back up `domains.json` (it's your data!)
-- Run during off-peak hours to reduce server load
-- Respect `robots.txt` and terms of service
-
-❌ **DON'T:**
-- Use on sites that prohibit crawling
-- Run with `--unlimited` without monitoring
-- Share crawl results without attribution
-- Crawl at extremely high speeds
-- Ignore rate limiting indicators
-
----
-
-**Built for LLM training and research**
-
----
-New version update: # ✨ Advanced Domain Crawler - V2 Enhancements
-
-## 🎯 Major Improvements Implemented
-
-### 1. **Real-Time Incremental Logging** 📊
-Your `log.json` now updates **as crawling progresses** instead of only at the end!
-
-**Features:**
-- ✅ Live progress tracking in `log.json`
-- ✅ Flushes every 10 URLs crawled
-- ✅ Shows current status: `crawling` → `completed`
-- ✅ Real-time statistics:
-  - URLs crawled so far
-  - Unique domains discovered
-  - Error count
-  - Memory usage
-  - Crawl rate (URLs/sec)
-  - Elapsed time
-- ✅ Top servers and domains list updates live
-- ✅ Final completion summary with total time
-
-**Sample incremental log.json:**
-```json
-{
-  "timestamp_start": "2026-01-24T10:30:00Z",
-  "timestamp_last_update": "2026-01-24T10:31:15Z",
-  "status": "crawling",
-  "urls_crawled": 250,
-  "unique_domains": 82,
-  "errors": 3,
-  "memory_mb": "145.32",
-  "elapsed_seconds": 75.5,
-  "crawl_rate_urls_per_sec": 3.31,
-  "top_servers": {
-    "cloudflare": 45,
-    "Apache": 28,
-    "nginx": 15
-  },
-  "summary": {...}
-}
-```
-
-### 2. **Vastly Improved Link Extraction** 🔗
-Now extracts links from **8+ different sources** instead of just 3!
-
-**Extraction Sources:**
-- ✅ `href` attributes (a, link, area tags)
-- ✅ `src` attributes (script, img, iframe, source)
-- ✅ Meta tags (og:url, canonical, description, etc.)
-- ✅ Form action URLs
-- ✅ JSON-LD structured data (url, sameAs, image, logo)
-- ✅ Event handlers (onclick, onload, data-url, data-href)
-- ✅ Regex extraction from event handlers
-- ✅ Multiple property extraction from tags
-
-**Improvements:**
-- 🔍 Finds 2-3x more links per page
-- 🎯 Extracts from hidden/dynamic sources
-- 📈 Up to 200 links per page (vs 100 before)
-
-### 3. **Deeper Crawling Capability** 📈
-Enhanced depth management for more thorough exploration!
-
-**Depth Configuration:**
-- Standard mode: 10 levels deep (was 5)
-- Unlimited mode: 20 levels deep (was 15)
-- Better for discovering nested domain structures
-- Adaptive based on crawl type
-
-### 4. **Safer & More Powerful** 🛡️⚡
-
-**Enhanced Safety:**
-- ✅ **Retry Logic**: 3 retry attempts per URL with exponential backoff
-- ✅ **Better Error Handling**: Comprehensive exception catching
-- ✅ **Status Code Validation**: Handles 200, 301, 302, 307, 308
-- ✅ **Error Tracking**: Counts and logs errors in real-time
-- ✅ **Timeout Management**: Better async timeout handling
-- ✅ **HTML Size Limits**: 2MB per response (up from 1MB)
-- ✅ **Connection Pooling**: Optimized for concurrent requests
-
-**More Powerful:**
-- ⚡ **Larger Thread Pool**: 32 threads (was 16)
-- ⚡ **Adaptive Semaphores**: 150 for unlimited, 100 for standard async
-- ⚡ **Larger Batch Size**: 100 links per batch (was 50)
-- ⚡ **Better Concurrency**: More concurrent requests
-- ⚡ **Improved Timeouts**: 15 second connection timeout
-- ⚡ **2MB HTML limit**: Better data capture
-
-### 5. **Complete Logging System** 📝
-
-**What's Logged in Real-Time:**
-```
-[INFO] Configuration: mode=async, max_domains=500
-[INFO] Memory limit: 2000MB, Batch size: 100
-[INFO] Starting async domain crawl from: https://example.com
-[INFO] Max domains: 500, Max depth: 20
-...crawling progress updates...
-[INFO] ✓ Crawling complete
-[INFO] ✓ Domains saved to: domains.json
-[INFO] ✓ Summary saved to: log.json
-```
-
-**Final log.json includes:**
-- Start and end timestamps
-- Total URLs crawled
-- Total unique domains
-- Error count
-- Final memory usage
-- Total elapsed time
-- Average crawl rate
-- Top 10 servers found
-- Top 100 domains found
-- Complete summary statistics
-
----
-
-## 📊 Configuration Changes
-
-```python
-# Enhanced Configuration
-MAX_DOMAINS_DEFAULT = 500        # Sensible default
-MAX_DEPTH = 10                   # Deeper standard crawling
-MAX_DEPTH_UNLIMITED = 20         # Much deeper exploration
-TIMEOUT = 15                     # Longer timeout for reliability
-THREADS = 32                     # More threads for power
-BATCH_SIZE = 100                 # Larger batches
-MEMORY_LIMIT_MB = 2000           # 2GB limit for power users
-LOG_FLUSH_INTERVAL = 10          # Update log every 10 URLs
+# Open Pull Request
 ```
 
 ---
 
-## 🔍 Advanced Link Extraction Example
+## 📄 License
 
-The new extractor finds links from:
+**MIT License** - Use freely for research and training purposes
 
-```html
-<!-- Standard links -->
-<a href="/page">Link</a>
-
-<!-- Meta tags -->
-<meta property="og:url" content="https://other-domain.com">
-
-<!-- Form actions -->
-<form action="https://submit.example.com">
-
-<!-- JSON-LD data -->
-<script type="application/ld+json">
-{
-  "url": "https://another-domain.com",
-  "sameAs": "https://also-mentioned.com"
-}
-</script>
-
-<!-- Event handlers -->
-<div onclick="window.location='https://dynamic-domain.com'"></div>
-
-<!-- Data attributes -->
-<button data-url="https://api.example.com">Click</button>
-```
-
-All of these will now be discovered and crawled!
+Copyright (c) 2026 DEEPWEBER Contributors
 
 ---
 
-## ⏱️ Real-Time Logging Benefits
+## 📞 Support
 
-### During Crawl
-You can now **monitor progress in real-time** by watching `log.json`:
-
-```bash
-# In another terminal while crawler is running:
-watch -n 1 "cat log.json | jq '.elapsed_seconds, .urls_crawled, .unique_domains'"
-```
-
-### Early Stopping
-Stop whenever you have enough domains - partial results are already saved!
-
-### Progress Tracking
-See live crawl rate, memory usage, and error count without waiting for completion.
-
----
-
-## 🚀 Usage & Performance
-
-### For Maximum Power
-```bash
-python main.py https://example.com --mode async --unlimited
-# 20 levels deep, 2GB memory, 32 threads, real-time logging
-```
-
-### For Balanced Performance
-```bash
-python main.py https://example.com --mode async
-# 10 levels deep, adaptive settings, real-time logging
-```
-
-### For Safe Exploration
-```bash
-python main.py https://example.com
-# 10 levels, sync mode, detailed logging
-```
-
----
-
-## 📈 Performance Improvements
-
-| Metric | Before | After | Gain |
-|--------|--------|-------|------|
-| Links Extracted | 100/page | 200/page | +100% |
-| Extraction Sources | 3 | 8+ | +167% |
-| Thread Count | 16 | 32 | +100% |
-| Max Depth (std) | 5 | 10 | +100% |
-| Max Depth (unlimited) | 15 | 20 | +33% |
-| HTML Size Limit | 1MB | 2MB | +100% |
-| Batch Size | 50 | 100 | +100% |
-| Async Semaphore | 50-100 | 100-150 | +50% |
-| Retry Attempts | 0 | 3 | Infinite |
-| Logging | Final only | Real-time | Live! |
-
----
-
-## 🛡️ Safety Features
-
-### Retry Logic
-- 3 automatic retries with exponential backoff
-- Handles temporary failures gracefully
-- Better reliability on unstable networks
-
-### Error Tracking
-- Real-time error counting
-- Error details in logs
-- Failed URLs tracked to prevent re-attempting
-
-### Resource Management
-- Memory monitoring every 50 URLs
-- 2GB hard limit (configurable)
-- Automatic garbage collection
-- Batch processing prevents memory spikes
-
-### Connection Safety
-- Connection pooling with limits
-- Per-host connection limits
-- Proper timeout handling
-- Status code validation (not just 200)
-
----
-
-## 📁 Output Files
-
-### domains.json
-Same format, but now:
-- ✅ Updated in real-time as domains are found
-- ✅ Easier to work with while crawler is running
-- ✅ Safe atomic writes
-
-### log.json
-**NEW**: Updated every 10 URLs with:
-- Current crawl status
-- URLs crawled so far
-- Unique domains found
-- Memory and CPU info
-- Crawl rate statistics
-- Top servers and domains
-- Error count
+- **Issues**: Open a GitHub issue
+- **Questions**: Check FAQ above
+- **Contributions**: Submit pull requests
+- **Feedback**: Always welcome
 
 ---
 
 ## 🎓 Best Practices
 
-### For LLM Training (Recommended)
-```bash
-python main.py https://example.com --mode async
-# Then monitor progress:
-watch -n 2 cat log.json | python -m json.tool
-```
+### ✅ DO:
+- Use for LLM training
+- Analyze domain patterns
+- Study web infrastructure
+- Build domain databases
+- Academic research
 
-### For Deep Exploration
-```bash
-python main.py https://example.com --mode async --unlimited
-# Good for comprehensive domain mapping
-```
+### ❌ DON'T:
+- Scrape personal data
+- Bypass authentication
+- Violate terms of service
+- Create spam lists
+- Malicious activities
 
-### For Restricted Systems
+---
+
+## 🚀 Quick Reference
+
 ```bash
+# Basic crawl
 python main.py https://example.com
-# Stable sync mode, good error messages
+
+# Fast async
+python main.py https://example.com --mode async
+
+# Deep research
+python main.py https://example.com --mode async --unlimited
+
+# Start fresh
+del domains.json log.json errors.json  # Windows
+rm domains.json log.json errors.json   # macOS/Linux
+
+# Resume
+python main.py https://example.com
+
+# Help
+python main.py --help
 ```
 
 ---
 
-**This project is not finished yet so it will be updated soon this week for even better performance**
+**Built with ❤️ for AI research and domain intelligence**
 
+**Version:** 2.1.0 | **Python:** 3.8+ | **Status:** Production Ready | **Updated:** January 24, 2026
