@@ -1,9 +1,8 @@
-# DEEPWEBER - Global Domain Crawler [![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)](#status)
+# DEEPWEBER - Test Domain Crawler [![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)](#status)
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 
-> **Discover real-world domains at scale.** High-performance web crawler for collecting live domain data with intelligent hardware-aware configurations and multi-profile support.
-
+> **Discover real-world domains at scale.** Test web crawler for collecting live domain data with intelligent hardware-aware configurations and multi-profile support.
 ---
 
 ## 📑 Table of Contents
