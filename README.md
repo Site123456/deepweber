@@ -1,6 +1,71 @@
 # DEEPWEBER - Test Domain Crawler [![Status](https://img.shields.io/badge/Status-Ongoing-brightgreen)](#status)
 
+
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+
+### TODO before 28 JAN 2026
+#### 🕸️ Crawling
+- [ ] Add **A → Z domain crawler**
+- [ ] Wordlist-based domain enumeration
+- [ ] Subdomain discovery (bruteforce + passive sources)
+- [ ] Recursive link crawler
+- [ ] Sitemap.xml parsing support
+
+
+#### ✅ Verification
+- [ ] Verify domains **during crawl** (not in a separate run)
+- [X] HTTP status check
+- [ ] SSL/TLS certificate validation
+- [ ] Detect parked / expired domains
+- [ ] Detect redirects and content-type
+
+
+#### 🛡️ Safety
+- [X] Rate limiting
+- [X] Request timeout handling
+- [ ] Retry with exponential backoff
+- [ ] Respect `robots.txt`
+- [ ] Safer crawling strategy
+- [X] Blacklist / whitelist system
+
+
+#### 🌐 Networking
+- [ ] Proxy support
+- [ ] TOR integration
+- [ ] User-agent rotation
+- [ ] Header randomization
+
+
+#### ⚡ Performance
+- [ ] Multi-threaded crawling
+- [X] Async I/O support
+- [X] Queue-based job system
+- [X] Resume interrupted crawl
+
+
+#### 💾 Storage
+- [X] JSON output
+- [ ] CSV export
+- [ ] SQLite support
+
+
+#### 🧠 Analysis
+- [ ] Content hashing
+- [ ] Duplicate content detection
+- [ ] Keyword extraction
+- [ ] Language detection
+- [ ] Page classification (blog, shop, forum, etc.)
+
+
+#### 🛠️ Developer Experience
+- [ ] CLI interface
+- [ ] Config file support
+- [ ] Plugin system
+- [ ] Logging levels
+- [ ] Unit tests
+
+---
+⚠️ **Disclaimer:** DeepWeber is intended for research and educational purposes only. Always respect website terms of service and local laws.
 
 > **Discover real-world domains at scale.** Test web crawler for collecting live domain data with intelligent hardware-aware configurations and multi-profile support.
 ---
