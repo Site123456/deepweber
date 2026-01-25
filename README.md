@@ -37,7 +37,15 @@ type log.json         # Windows
 ```
 
 **Result:** `domains.json`, `log.json`, `errors.json` created ✅
-
+**For Production** (Ex: Getting Data for LLM): Use `verified_domains.json` &  `verified_log.json` insted.
+A example method for production data:
+```bash
+# Step 1: Crawl domains with async method
+python main.py https://google.com --mode async
+# Step 3: Verify all discovered domains
+python verifydomain.py
+# Step 4 Results are generated at record time in: verified_domains.json and verified_log.json use these domain to view their pdf or other data files
+```
 ---
 
 ## ✅ System Requirements
@@ -845,12 +853,12 @@ python verifydomain.py
 
 ⚠️ **IMPORTANT:** Limit retries set to **3 maximum** (line ~604 in `main.py`)
 
-> Setting retries > 3 will trigger DDOS auto-blocks on many servers. This will:
+Setting retries > 3 will trigger DDOS auto-blocks on many servers. This will:
 > - Ban your IP temporarily (15-60 minutes)
 > - Fail domain verification attempts
 > - Reduce overall crawl efficiency
 
-**Current default is safe.** Do not increase unless you have dedicated infrastructure with rotating IPs.
+**Current default are safe:** Do not increase unless you have dedicated infrastructure with rotating IPs.
 ---
 
 **Version:** 1.0.2 | **Python:** 3.8+ | **Updated:** 25 JAN 2026
