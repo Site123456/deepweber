@@ -60,6 +60,7 @@ The crawler writes verified output immediately to:
 - verified_domains.json
 - verified_log.json
 Use the domains listed in these files to access their PDFs or other data.
+
 ---
 
 ## ✅ System Requirements
