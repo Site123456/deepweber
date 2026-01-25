@@ -833,6 +833,7 @@ Check [Performance Benchmarks](#-performance-benchmarks) for expected results.
 | **Success Rate** | 68.94% | 🚀 Exceptional |
 
 > 🎯 **Crawled and verified 380+ million URLs discovering 261+ million live domains** using the automated `verifydomain.py` verification system in under **24 hours** of runtime.
+While this crawling approach depends on inter‑domain link structures, a fully exhaustive brute‑force sweep of the entire domain space (from a to z) would provide broader coverage, though at the cost of significantly longer execution time.
 
 ### 🔧 Verification Environment
 
