@@ -843,14 +843,14 @@ python verifydomain.py
 - ⚡ **Performance note** - Brute-force method uses aggressive timeouts for speed (faster than real-world browsing)
 - 📊 **Data quality** - All verified through HTTP head/GET requests with status code validation
 
-> ⚠️ **IMPORTANT:** Limit retries to **3 maximum** (line ~604 in `main.py`)
-> 
+⚠️ **IMPORTANT:** Limit retries set to **3 maximum** (line ~604 in `main.py`)
+
 > Setting retries > 3 will trigger DDOS auto-blocks on many servers. This will:
 > - Ban your IP temporarily (15-60 minutes)
 > - Fail domain verification attempts
 > - Reduce overall crawl efficiency
->
-> **Current default is safe.** Do not increase unless you have dedicated infrastructure with rotating IPs.
+
+**Current default is safe.** Do not increase unless you have dedicated infrastructure with rotating IPs.
 ---
 
-**Version:** 1.0.1 | **Python:** 3.8+ | **Updated:** 25 JAN 2026
+**Version:** 1.0.2 | **Python:** 3.8+ | **Updated:** 25 JAN 2026
