@@ -443,7 +443,7 @@ BATCH_SIZE = 250          # Reduce batch size
 
 ### Link Extraction
 
-The crawler uses **8+ extraction methods**:
+The crawler uses **8+ extraction methods** and goes directly to main domain insted of going to each xml files:
 1. HTML href attributes
 2. Relative URLs (./path, ../path)
 3. Meta tags (OG, canonical)
