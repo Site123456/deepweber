@@ -40,7 +40,8 @@ type log.json         # Windows
 
 
 **For Production** (Ex: Getting Data for LLM): Use `verified_domains.json` &  `verified_log.json` insted.
---
+
+
 A example method for production data:
 ```bash
 # Step 1: Crawl domains with async method
