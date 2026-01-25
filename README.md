@@ -43,13 +43,23 @@ type log.json         # Windows
 
 
 A example method for production data:
+### **Step 1 — Crawl Domains (Async Mode)**
+Discover domains using the asynchronous crawler:
 ```bash
-# Step 1: Crawl domains with async method
 python main.py https://google.com --mode async
-# Step 3: Verify all discovered domains
-python verifydomain.py
-# Step 4 Results are generated at record time in: verified_domains.json and verified_log.json use these domain to view their pdf or other data files
 ```
+
+### **Step 2 — Verify All Discovered Domains**
+Validate every domain collected during the crawl:
+```bash
+python verifydomain.py
+```
+
+### **Step 3 — Review the Results**
+The crawler writes verified output immediately to:
+- verified_domains.json
+- verified_log.json
+Use the domains listed in these files to access their PDFs or other data.
 ---
 
 ## ✅ System Requirements
