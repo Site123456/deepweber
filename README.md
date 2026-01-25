@@ -809,7 +809,7 @@ Check [Performance Benchmarks](#-performance-benchmarks) for expected results.
 | **Not Accessible** | 118,033,118 | ⚠️ Unreachable |
 | **Success Rate** | 68.94% | 🚀 Exceptional |
 
-> 🎯 **Crawled and verified 380+ million URLs discovering 261+ million live domains** using the automated `verifydomain.py` verification system in under **48 hours** of runtime.
+> 🎯 **Crawled and verified 380+ million URLs discovering 261+ million live domains** using the automated `verifydomain.py` verification system in under **24 hours** of runtime.
 
 ### 🔧 Verification Environment
 
