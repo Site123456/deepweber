@@ -6,47 +6,47 @@
 ### TODO before 31 JAN 2026 Crawler only
 | Category | Capability | Status |
 |--------|-----------|--------|
-| **Crawling** | A–Z domain sweep | ⬜ |
+| **Crawling** | A–Z domain sweep | -- |
 |  | Subdomain discovery | ✅ |
 |  | Bruteforce (dict + permutations) | ✅ |
-|  | Recursive link crawl (depth‑aware) | ⬜ |
-|  | sitemap.xml & robots.txt parsing | ⬜ |
+|  | Recursive link crawl (depth‑aware) | -- |
+|  | sitemap.xml & robots.txt parsing | -- |
 |  | URL normalization / canonicalization | ✅ |
 | **Verification** | Streaming domain verification | -- |
 |  | HTTP status detection | ✅ |
-|  | SSL/TLS validation | ⬜ |
+|  | SSL/TLS validation | -- |
 |  | Parked / expired detection | ✅ |
-|  | Redirect chain analysis | ⬜ |
-|  | MIME / content‑type detection | ⬜ |
+|  | Redirect chain analysis | -- |
+|  | MIME / content‑type detection | -- |
 | **Safety** | Adaptive rate limiting | ✅ |
 |  | Timeout handling | ✅ |
 |  | Exponential backoff retries | ⬜ |
 |  | Robots.txt strict/permissive | ⬜ |
 |  | Trap / honeypot detection | ⬜ |
 |  | Blacklist / whitelist rules | ✅ |
-| **Networking** | Proxy support | ⬜ |
-|  | TOR mode | ⬜ |
+| **Networking** | Proxy support | -- |
+|  | TOR mode | -- |
 |  | Header randomization | ⬜ |
-|  | IP randomization | ⬜ |
+|  | IP randomization | -- |
 | **Performance** | Multi‑threaded | ⬜ |
 |  | Async I/O pipeline | ✅ |
 |  | Queue scheduler | ✅ |
 |  | Resume checkpoints | ✅ |
 |  | Distributed crawling | ⬜ |
-| **Storage** | JSON output | ✅ |
-|  | Compressed output | ⬜ |
-|  | SQLite / DuckDB | ⬜ |
-|  | Append‑only logs | ⬜ |
-| **Analysis** | Content hashing | ⬜ |
-|  | Duplicate detection | ⬜ |
-|  | Keyword extraction | ⬜ |
-|  | Language detection | ⬜ |
-|  | Page classification | ⬜ |
-|  | Server fingerprinting | ⬜ |
-| **DevX** | CLI interface | ⬜ |
+| **Storage** | JSON output | -- |
+|  | Compressed output | -- |
+|  | SQLite | -- |
+|  | Append‑only logs | -- |
+| **Analysis** | Content hashing | -- |
+|  | Duplicate detection | -- |
+|  | Keyword extraction | -- |
+|  | Language detection | -- |
+|  | Page classification | -- |
+|  | Server fingerprinting | -- |
+| **DevX** | CLI interface | -- |
 |  | Modular docs | ⬜ |
 
-✅ Implemented   ⬜ Planned
+✅ Implemented   ⬜ Planned -- Made but not fully published
 
 ---
 ⚠️ **Disclaimer:** DeepWeber is intended for research and educational purposes only. Always respect website terms of service and local laws.
