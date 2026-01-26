@@ -55,7 +55,6 @@
 |  | Tests | ⬜ |
 |  | Modular docs | ⬜ |
 
-// for copy
 ✅ Implemented   ⬜ Planned
 
 ---
