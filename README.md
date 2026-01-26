@@ -4,65 +4,59 @@
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 
 ### TODO before 31 JAN 2026
-#### 🕸️ Crawling
-- [ ] Add **A → Z domain crawler**
-- [ ] Wordlist-based domain enumeration
-- [ ] Subdomain discovery (bruteforce + passive sources)
-- [ ] Recursive link crawler
-- [ ] Sitemap.xml parsing support
+| Category | Capability | Status |
+|--------|-----------|--------|
+| **Crawling** | A–Z domain sweep | ⬜ |
+|  | Wordlist domain enumeration | ⬜ |
+|  | Subdomain discovery | ⬜ |
+|  | Bruteforce (dict + permutations) | ⬜ |
+|  | Passive sources (certs, DNS, APIs) | ⬜ |
+|  | Recursive link crawl (depth‑aware) | ⬜ |
+|  | sitemap.xml & robots.txt parsing | ⬜ |
+|  | URL normalization / canonicalization | ⬜ |
+|  | JS‑rendered extraction (headless) | ⬜ |
+| **Verification** | Streaming domain verification | ⬜ |
+|  | HTTP status detection | ✅ |
+|  | SSL/TLS validation | ⬜ |
+|  | Parked / expired detection | ⬜ |
+|  | Redirect chain analysis | ⬜ |
+|  | MIME / content‑type detection | ⬜ |
+|  | DNS profiling (A/AAAA/CNAME) | ⬜ |
+| **Safety** | Adaptive rate limiting | ✅ |
+|  | Timeout handling | ✅ |
+|  | Exponential backoff retries | ⬜ |
+|  | Robots.txt strict/permissive | ⬜ |
+|  | Trap / honeypot detection | ⬜ |
+|  | Blacklist / whitelist rules | ✅ |
+| **Networking** | Proxy support | ⬜ |
+|  | TOR mode | ⬜ |
+|  | UA rotation | ⬜ |
+|  | Header randomization | ⬜ |
+|  | Keep‑alive / pooling | ⬜ |
+| **Performance** | Multi‑threaded | ⬜ |
+|  | Async I/O pipeline | ✅ |
+|  | Queue scheduler | ✅ |
+|  | Resume checkpoints | ✅ |
+|  | Distributed crawling | ⬜ |
+| **Storage** | JSON output | ✅ |
+|  | Compressed output | ⬜ |
+|  | SQLite / DuckDB | ⬜ |
+|  | Append‑only logs | ⬜ |
+| **Analysis** | Content hashing | ⬜ |
+|  | Duplicate detection | ⬜ |
+|  | Keyword extraction | ⬜ |
+|  | Language detection | ⬜ |
+|  | Page classification | ⬜ |
+|  | Server fingerprinting | ⬜ |
+| **DevX** | CLI interface | ⬜ |
+|  | Config files | ⬜ |
+|  | Plugin system | ⬜ |
+|  | Logging levels | ⬜ |
+|  | Tests | ⬜ |
+|  | Modular docs | ⬜ |
 
-
-#### ✅ Verification
-- [ ] Verify domains **during crawl** (not in a separate run)
-- [X] HTTP status check
-- [ ] SSL/TLS certificate validation
-- [ ] Detect parked / expired domains
-- [ ] Detect redirects and content-type
-
-
-#### 🛡️ Safety
-- [X] Rate limiting
-- [X] Request timeout handling
-- [ ] Retry with exponential backoff
-- [ ] Respect `robots.txt`
-- [ ] Safer crawling strategy
-- [X] Blacklist / whitelist system
-
-
-#### 🌐 Networking
-- [ ] Proxy support
-- [ ] TOR integration
-- [ ] User-agent rotation
-- [ ] Header randomization
-
-
-#### ⚡ Performance
-- [ ] Multi-threaded crawling
-- [X] Async I/O support
-- [X] Queue-based job system
-- [X] Resume interrupted crawl
-
-
-#### 💾 Storage
-- [X] JSON output
-- [ ] CSV export
-- [ ] SQLite support
-
-
-#### 🧠 Analysis
-- [ ] Content hashing
-- [ ] Duplicate content detection
-- [ ] Keyword extraction
-- [ ] Language detection
-- [ ] Page classification (blog, shop, forum, etc.)
-
-
-#### 🛠️ Developer Experience
-- [ ] CLI interface
-- [ ] Config file support
-- [ ] Plugin system
-- [ ] Logging levels
-- [ ] Unit tests
+// for copy
+✅ Implemented   ⬜ Planned
 
 ---
 ⚠️ **Disclaimer:** DeepWeber is intended for research and educational purposes only. Always respect website terms of service and local laws.
