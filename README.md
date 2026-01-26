@@ -3,7 +3,7 @@
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 
-### TODO before 31 JAN 2026 Crawler only
+### Progress of DEEPWEBER
 | Category         | Capability                             | Status |
 | ---------------- | -------------------------------------- | ------ |
 | **Crawling**     | A–Z domain sweep                       | ⏳      |
@@ -55,7 +55,11 @@ Features in Progress:
   - Remote multi‑server IP rotation using multiple servers with variable intervals
   - Currently supported OS for remote nodes: Ubuntu only
 
-
+Next steps:
+  - PDF & Text data gathering system
+  - Fine tuning 1
+  - Basic next word prediction based on data gathered
+  - Fine tuning 2
 
 ---
 ⚠️ **Disclaimer:** DeepWeber is intended for research and educational purposes only. Always respect website terms of service and local laws.
