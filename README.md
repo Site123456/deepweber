@@ -4,51 +4,59 @@
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 
 ### TODO before 31 JAN 2026 Crawler only
-| Category | Capability | Status |
-|--------|-----------|--------|
-| **Crawling** | A–Z domain sweep | -- |
-|  | Subdomain discovery | ✅ |
-|  | Bruteforce (dict + permutations) | ✅ |
-|  | Recursive link crawl (depth‑aware) | -- |
-|  | sitemap.xml & robots.txt parsing | -- |
-|  | URL normalization / canonicalization | ✅ |
-| **Verification** | Streaming domain verification | -- |
-|  | HTTP status detection | ✅ |
-|  | SSL/TLS validation | -- |
-|  | Parked / expired detection | ✅ |
-|  | Redirect chain analysis | -- |
-|  | MIME / content‑type detection | -- |
-| **Safety** | Adaptive rate limiting | ✅ |
-|  | Timeout handling | ✅ |
-|  | Exponential backoff retries | ⬜ |
-|  | Robots.txt strict/permissive | ⬜ |
-|  | Trap / honeypot detection | ⬜ |
-|  | Blacklist / whitelist rules | ✅ |
-| **Networking** | Proxy support | -- |
-|  | TOR mode | -- |
-|  | Header randomization | ⬜ |
-|  | IP randomization | -- |
-| **Performance** | Multi‑threaded | ⬜ |
-|  | Async I/O pipeline | ✅ |
-|  | Queue scheduler | ✅ |
-|  | Resume checkpoints | ✅ |
-|  | Distributed crawling | ⬜ |
-| **Storage** | JSON output | -- |
-|  | Compressed output | -- |
-|  | SQLite | -- |
-|  | Append‑only logs | -- |
-| **Analysis** | Content hashing | -- |
-|  | Duplicate detection | -- |
-|  | Keyword extraction | -- |
-|  | Language detection | -- |
-|  | Page classification | -- |
-|  | Server fingerprinting | -- |
-| **DevX** | CLI interface | -- |
-|  | Modular docs | ⬜ |
+| Category         | Capability                             | Status |
+| ---------------- | -------------------------------------- | ------ |
+| **Crawling**     | A–Z domain sweep                       | ⏳      |
+|                  | Subdomain discovery                    | ✅      |
+|                  | Bruteforce (dictionary + permutations) | ✅      |
+|                  | Recursive link crawling (depth‑aware)  | ⏳      |
+|                  | sitemap.xml & robots.txt parsing       | ⏳      |
+|                  | URL normalization & canonicalization   | ✅      |
+| **Verification** | Streaming domain verification          | ⏳      |
+|                  | HTTP status detection                  | ✅      |
+|                  | SSL/TLS validation                     | ⏳      |
+|                  | Parked / expired domain detection      | ✅      |
+|                  | Redirect chain analysis                | ⏳      |
+|                  | MIME / content‑type detection          | ⏳      |
+| **Safety**       | Adaptive rate limiting                 | ✅      |
+|                  | Request timeout handling               | ✅      |
+|                  | Exponential backoff retries            | ⬜      |
+|                  | Robots.txt strict & permissive modes   | ⬜      |
+|                  | Trap / honeypot detection              | ⬜      |
+|                  | Blacklist / whitelist rules            | ✅      |
+| **Networking**   | Proxy support                          | ⏳      |
+|                  | TOR routing mode                       | ⏳      |
+|                  | Header randomization                   | ⬜      |
+|                  | IP randomization                       | ⏳      |
+| **Performance**  | Multi‑threaded crawling                | ⬜      |
+|                  | Async I/O pipeline                     | ✅      |
+|                  | Queue‑based scheduler                  | ✅      |
+|                  | Resume from checkpoints                | ✅      |
+|                  | Distributed crawling                   | ⬜      |
+| **Storage**      | JSON output                            | ⏳      |
+|                  | Compressed output                      | ⏳      |
+|                  | SQLite backend                         | ⏳      |
+|                  | Append‑only logs                       | ⏳      |
+| **Analysis**     | Content hashing                        | ⏳      |
+|                  | Duplicate detection                    | ⏳      |
+|                  | Keyword extraction                     | ⏳      |
+|                  | Language detection                     | ⏳      |
+|                  | Page classification                    | ⏳      |
+|                  | Server fingerprinting                  | ⏳      |
+| **DevX**         | CLI interface                          | ⏳      |
+|                  | Modular documentation                  | ⬜      |
 
 ✅ Implemented   ⬜ Planned -- Made but not published on current version
 
 Next version will be published automatically after 7 days the time to test it and regulate some issues with sensetive data.
+
+Features in Progress:
+  - Multi python file to limit cache depending on steps
+  - Remote multi‑server IP rotation using multiple servers with variable intervals
+  - Currently supported OS for remote nodes: Ubuntu only
+
+
+
 ---
 ⚠️ **Disclaimer:** DeepWeber is intended for research and educational purposes only. Always respect website terms of service and local laws.
 
