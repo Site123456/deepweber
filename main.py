@@ -43,7 +43,7 @@ ERROR_FILE = "errors.json"  # NEW: Track errors with details
 CACHE_DIR = "cache"  # Temporary cache for SSD storage
 CACHE_MAX_SIZE_MB = 10240  # 10GB cache limit
 
-DOMAIN_BLACKLIST = {
+DOMAIN_BLACKLIST = {  # Remove or modify depending on usage
     "facebook.com",
     "instagram.com",
     "tiktok.com",
