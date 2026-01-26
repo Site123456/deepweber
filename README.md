@@ -46,7 +46,7 @@
 | **DevX**         | CLI interface                          | ⏳      |
 |                  | Modular documentation                  | ⬜      |
 
-✅ Implemented   ⬜ Planned -- Made but not published on current version
+✅ Implemented   ⬜ Planned ⏳ Made but not published on current version
 
 Next version will be published automatically after 7 days the time to test it and regulate some issues with sensetive data.
 
