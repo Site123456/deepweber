@@ -928,7 +928,7 @@ python verifydomain.py
 - ⚡ **Performance note** - Brute-force method uses aggressive timeouts for speed (faster than real-world browsing)
 - 📊 **Data quality** - All verified through HTTP head/GET requests with status code validation
 
-⚠️ **IMPORTANT:** Limit retries set to **3 maximum** (line ~604 in `main.py`)
+⚠️ **IMPORTANT:** Limit retries set to **3 maximum** (In `main.py`)
 
 Setting retries > 3 will trigger DDOS auto-blocks on many servers. This will:
 > - Ban your IP temporarily (15-60 minutes)
