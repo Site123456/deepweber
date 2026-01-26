@@ -46,7 +46,7 @@
 | **DevX** | CLI interface | -- |
 |  | Modular docs | ⬜ |
 
-✅ Implemented   ⬜ Planned -- Made but not fully published
+✅ Implemented   ⬜ Planned -- Made but not published on current version
 
 ---
 ⚠️ **Disclaimer:** DeepWeber is intended for research and educational purposes only. Always respect website terms of service and local laws.
