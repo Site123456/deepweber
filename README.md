@@ -27,6 +27,7 @@
 | **Networking** | Proxy support | ⬜ |
 |  | TOR mode | ⬜ |
 |  | Header randomization | ⬜ |
+|  | IP randomization | ⬜ |
 | **Performance** | Multi‑threaded | ⬜ |
 |  | Async I/O pipeline | ✅ |
 |  | Queue scheduler | ✅ |
