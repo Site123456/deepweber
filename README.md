@@ -48,6 +48,7 @@
 
 ✅ Implemented   ⬜ Planned -- Made but not published on current version
 
+Next version will be published automatically after 7 days the time to test it and regulate some issues with sensetive data.
 ---
 ⚠️ **Disclaimer:** DeepWeber is intended for research and educational purposes only. Always respect website terms of service and local laws.
 
