@@ -7,21 +7,17 @@
 | Category | Capability | Status |
 |--------|-----------|--------|
 | **Crawling** | A–Z domain sweep | ⬜ |
-|  | Wordlist domain enumeration | ⬜ |
-|  | Subdomain discovery | ⬜ |
-|  | Bruteforce (dict + permutations) | ⬜ |
-|  | Passive sources (certs, DNS, APIs) | ⬜ |
+|  | Subdomain discovery | ✅ |
+|  | Bruteforce (dict + permutations) | ✅ |
 |  | Recursive link crawl (depth‑aware) | ⬜ |
 |  | sitemap.xml & robots.txt parsing | ⬜ |
-|  | URL normalization / canonicalization | ⬜ |
-|  | JS‑rendered extraction (headless) | ⬜ |
-| **Verification** | Streaming domain verification | ⬜ |
+|  | URL normalization / canonicalization | ✅ |
+| **Verification** | Streaming domain verification | -- |
 |  | HTTP status detection | ✅ |
 |  | SSL/TLS validation | ⬜ |
-|  | Parked / expired detection | ⬜ |
+|  | Parked / expired detection | ✅ |
 |  | Redirect chain analysis | ⬜ |
 |  | MIME / content‑type detection | ⬜ |
-|  | DNS profiling (A/AAAA/CNAME) | ⬜ |
 | **Safety** | Adaptive rate limiting | ✅ |
 |  | Timeout handling | ✅ |
 |  | Exponential backoff retries | ⬜ |
@@ -30,9 +26,7 @@
 |  | Blacklist / whitelist rules | ✅ |
 | **Networking** | Proxy support | ⬜ |
 |  | TOR mode | ⬜ |
-|  | UA rotation | ⬜ |
 |  | Header randomization | ⬜ |
-|  | Keep‑alive / pooling | ⬜ |
 | **Performance** | Multi‑threaded | ⬜ |
 |  | Async I/O pipeline | ✅ |
 |  | Queue scheduler | ✅ |
@@ -49,10 +43,6 @@
 |  | Page classification | ⬜ |
 |  | Server fingerprinting | ⬜ |
 | **DevX** | CLI interface | ⬜ |
-|  | Config files | ⬜ |
-|  | Plugin system | ⬜ |
-|  | Logging levels | ⬜ |
-|  | Tests | ⬜ |
 |  | Modular docs | ⬜ |
 
 ✅ Implemented   ⬜ Planned
