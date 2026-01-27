@@ -47,7 +47,7 @@
 |                  | Modular documentation                  | ⬜      |
 
 ✅ Implemented   ⬜ Planned ⏳ Made but not published on current version
-
+The current version is condenced from +1000 lines to just ~500 lines with better performance and verifies as you go no need for verify.py and can be lunched by directly: `python main.py`
 Next version will be published automatically after 7 days the time to test it and regulate some issues with sensetive data.
 
 Features in Progress:
@@ -60,7 +60,7 @@ Next steps:
   - Fine tuning 1
   - Basic next word prediction based on data gathered
   - Fine tuning 2
-
+The docs are incomplete and will soon be changed.
 ---
 ⚠️ **Disclaimer:** DeepWeber is intended for research and educational purposes only. Always respect website terms of service and local laws.
 
