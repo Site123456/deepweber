@@ -61,6 +61,7 @@ Next steps:
   - Basic next word prediction based on data gathered
   - Fine tuning 2
 The docs are incomplete and will soon be changed.
+Old docs:
 ---
 ⚠️ **Disclaimer:** DeepWeber is intended for research and educational purposes only. Always respect website terms of service and local laws.
 
