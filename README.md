@@ -7,8 +7,8 @@
 | Category         | Capability                             | Status |
 | ---------------- | -------------------------------------- | ------ |
 | **Crawling**     | A–Z domain sweep                       | ⏳      |
-|                  | Subdomain discovery                    | ✅      |
-|                  | Bruteforce (dictionary + permutations) | ✅      |
+|                  | Subdomain discovery                    | ⏳      |
+|                  | Bruteforce (dictionary + permutations) | ⏳      |
 |                  | Recursive link crawling (depth‑aware)  | ⏳      |
 |                  | sitemap.xml & robots.txt parsing       | ⏳      |
 |                  | URL normalization & canonicalization   | ✅      |
@@ -21,18 +21,18 @@
 | **Safety**       | Adaptive rate limiting                 | ✅      |
 |                  | Request timeout handling               | ✅      |
 |                  | Exponential backoff retries            | ⬜      |
-|                  | Robots.txt strict & permissive modes   | ⬜      |
-|                  | Trap / honeypot detection              | ⬜      |
+|                  | Robots.txt strict & permissive modes   | ⏳      |
+|                  | Trap / honeypot detection              | ⏳      |
 |                  | Blacklist / whitelist rules            | ✅      |
 | **Networking**   | Proxy support                          | ⏳      |
 |                  | TOR routing mode                       | ⏳      |
-|                  | Header randomization                   | ⬜      |
+|                  | Header randomization                   | ⏳      |
 |                  | IP randomization                       | ⏳      |
-| **Performance**  | Multi‑threaded crawling                | ⬜      |
+| **Performance**  | Multi‑threaded crawling                | ⏳      |
 |                  | Async I/O pipeline                     | ✅      |
 |                  | Queue‑based scheduler                  | ✅      |
 |                  | Resume from checkpoints                | ✅      |
-|                  | Distributed crawling                   | ⬜      |
+|                  | Distributed crawling                   | ⏳      |
 | **Storage**      | JSON output                            | ⏳      |
 |                  | Compressed output                      | ⏳      |
 |                  | SQLite backend                         | ⏳      |
