@@ -2,6 +2,8 @@
 
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+![Demo](demo.gif)
+
 
 ### Progress of DEEPWEBER
 | Category         | Capability                             | Status |
@@ -60,7 +62,5 @@ Next steps:
   - Basic next word prediction based on data gathered
   - Fine tuning 2
 The docs are incomplete and will soon be changed.
-
-![Demo](demo.gif)
 ---
 **Version:** 1.0.2 | **Python:** 3.8+ | **Updated:** 31 JAN 2026
