@@ -1,10 +1,24 @@
-# DEEPWEBER - Test Domain Crawler [![Status](https://img.shields.io/badge/Status-Ongoing-brightgreen)](#status)
-
-
-[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+# DEEPWEBER – Test Domain Crawler  
+[![Status](https://img.shields.io/badge/Status-Ongoing-brightgreen)](#status)  
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)  
 ![Demo](demo.gif)
 
+**DEEPWEBER** is a lightweight, high-performance domain crawler designed to discover, verify, and analyze domains with minimal setup. It consolidates over 2000 lines of code into ~500 lines while maintaining modularity and reliability.
 
+---
+
+## 🚀 Quick Start
+
+1. Install dependencies:  
+```bash
+pip install -r requirements.txt
+```
+2. Python main.py:  
+```bash
+python main.py
+```
+3. Open your browser at localhost 3000 or your IP:3000
+   
 ### Progress of DEEPWEBER
 | Category         | Capability                             | Status |
 | ---------------- | -------------------------------------- | ------ |
@@ -50,17 +64,20 @@
 
 ✅ Implemented   ⬜ Planned ⏳ Made but not published on current version
 ---
-The current version is condenced from +2000 lines to just ~500 lines with better performance and verifies as you go no need for verify.py and can be lunched by directly: `python main.py`
+🔍 Features in Progress
 
-Features in Progress:
-  - Remote multi‑server IP rotation using multiple servers with variable intervals
-  - Currently supported OS for remote nodes: Ubuntu only
+Remote multi-server IP rotation with configurable intervals only local network works for now
 
-Next steps:
-  - PDF & Text data gathering system
-  - Fine tuning 1
-  - Basic next word prediction based on data gathered
-  - Fine tuning 2
-The docs are incomplete and will soon be changed.
+Supported OS for remote nodes: Ubuntu only
+
+🛠️ Next Steps
+
+PDF & text data gathering
+
+Fine-tuning phase 1
+
+Basic next-word prediction from collected data
+
+Fine-tuning phase 2
 ---
-**Version:** 1.0.2 | **Python:** 3.8+ | **Updated:** 31 JAN 2026
+**Version:** 1.0.2 | **Python:** 3.8+ | **Updated:** 07 FEB 2026
