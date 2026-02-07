@@ -1,7 +1,7 @@
 # DEEPWEBER – [![Status](https://img.shields.io/badge/Status-Ongoing-brightgreen)](#status)  [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)  
 ![Demo](demo.gif)
 
-**DEEPWEBER** is a lightweight, high-performance domain crawler designed to discover, verify, and analyze domains with minimal setup. It consolidates over 2000 lines of code into ~500 lines while maintaining modularity and reliability.
+**DEEPWEBER** is a lightweight, high-performance domain crawler designed to discover, verify, analyze and extract domains with minimal setup. It consolidates over 10000 lines of code  while maintaining modularity and reliability.
 
 ---
 
@@ -61,22 +61,23 @@ python main.py
 | **DevX**         | CLI interface                          | ⏳      |
 |                  | Modular documentation                  | ⬜      |
 
-✅ Implemented   ⬜ Planned ⏳ Made but not published on current version
+✅ Implemented   ⬜ Planned ⏳ Made but not published
 ---
 🔍 Features in Progress
 
 Remote multi-server IP rotation with configurable intervals only local network works for now
 
-Supported OS for remote nodes: Ubuntu only
+Seperation of python to multiple so it fits the limit of 1000 lines at mat in one file
 
-🛠️ Next Steps
+Supported OS directly for IP insted of web sockets
 
-PDF & text data gathering
+🛠️ Next Steps not started yet
 
 Fine-tuning phase 1
 
 Basic next-word prediction from collected data
 
 Fine-tuning phase 2
+
 ---
 **Version:** 1.0.2 | **Python:** 3.8+ | **Updated:** 07 FEB 2026
