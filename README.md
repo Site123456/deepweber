@@ -15,7 +15,8 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
-3. Open your browser at localhost 3000 or your IP:3000
+3. Open your browser at localhost 3000 or your IP:3000 a app based on react is generated to show progress
+4. Data are saved to ``./generation/visited`` or ``./generation/json`` or ``./generation/pdf``
    
 ### Progress of DEEPWEBER
 | Category         | Capability                             | Status |
