@@ -69,7 +69,7 @@ Remote multi-server IP rotation with configurable intervals only local network w
 
 Seperation of python to multiple so it fits the limit of 1000 lines at mat in one file
 
-Supported OS directly for IP insted of web sockets
+Implement OS directly for IP insted of web sockets
 
 🛠️ Next Steps not started yet
 
