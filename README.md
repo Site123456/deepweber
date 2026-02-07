@@ -20,7 +20,7 @@
 |                  | MIME / content‑type detection          | ⏳      |
 | **Safety**       | Adaptive rate limiting                 | ✅      |
 |                  | Request timeout handling               | ✅      |
-|                  | Exponential backoff retries            | ⬜      |
+|                  | Exponential backoff retries            | ⏳      |
 |                  | Robots.txt strict & permissive modes   | ⏳      |
 |                  | Trap / honeypot detection              | ⏳      |
 |                  | Blacklist / whitelist rules            | ✅      |
@@ -51,7 +51,6 @@
 The current version is condenced from +2000 lines to just ~500 lines with better performance and verifies as you go no need for verify.py and can be lunched by directly: `python main.py`
 
 Features in Progress:
-  - Multi python file to limit cache depending on steps
   - Remote multi‑server IP rotation using multiple servers with variable intervals
   - Currently supported OS for remote nodes: Ubuntu only
 
@@ -61,5 +60,7 @@ Next steps:
   - Basic next word prediction based on data gathered
   - Fine tuning 2
 The docs are incomplete and will soon be changed.
+
+![Demo](demo.gif)
 ---
 **Version:** 1.0.2 | **Python:** 3.8+ | **Updated:** 31 JAN 2026
