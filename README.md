@@ -1,6 +1,5 @@
 # DEEPWEBER – Test Domain Crawler  
-[![Status](https://img.shields.io/badge/Status-Ongoing-brightgreen)](#status)  
-[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)  
+[![Status](https://img.shields.io/badge/Status-Ongoing-brightgreen)](#status)  [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)(https://www.python.org/)  
 ![Demo](demo.gif)
 
 **DEEPWEBER** is a lightweight, high-performance domain crawler designed to discover, verify, and analyze domains with minimal setup. It consolidates over 2000 lines of code into ~500 lines while maintaining modularity and reliability.
