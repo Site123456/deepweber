@@ -16,7 +16,12 @@ pip install -r requirements.txt
 python main.py
 ```
 3. Open your browser at localhost 3000 or your IP:3000 a app based on react is generated to show progress
-4. Data are saved to ``./generation/visited`` or ``./generation/json`` or ``./generation/pdf``
+4. Data are saved to `./generation/visited` or `./generation/json`
+5. Lunch pdf generation
+```bash
+python viewpdf.py
+```
+6. PDF are saved to `./generation/pdf` and can be viewed in localhost 4000 during the python runtime
    
 ### Progress of DEEPWEBER
 | Category         | Capability                             | Status |
