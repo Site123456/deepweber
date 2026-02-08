@@ -17,11 +17,10 @@ python main.py
 ```
 3. Open your browser at localhost 3000 or your IP:3000 a app based on react is generated to show progress
       - Data are saved to `./generation/visited` or `./generation/json`
-4. Lunch pdf generation
+4. Lunch pdf generation - PDF are saved to `./generation/pdf`
 ```bash
 python viewpdf.py
 ```
-      - PDF are saved to `./generation/pdf` and can be viewed in localhost 4000 during the python runtime
    
 ### Progress of DEEPWEBER
 | Category         | Capability                             | Status |
