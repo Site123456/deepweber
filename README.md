@@ -21,6 +21,9 @@ python main.py
 ```bash
 python viewpdf.py
 ```
+
+## Efficient test
+![Demo](test.gif)
    
 ### Progress of DEEPWEBER
 | Category         | Capability                             | Status |
