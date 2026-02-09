@@ -23,6 +23,7 @@ python viewpdf.py
 ```
 
 ## Efficient test
+###### 1 snapshot is 1s.
 ![Demo](test.gif)
    
 ### Progress of DEEPWEBER
