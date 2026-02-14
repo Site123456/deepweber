@@ -77,19 +77,7 @@ python viewpdf.py
 ---
 🔍 Features in Progress
 
-Remote multi-server IP rotation with configurable intervals only local network works for now
-
-Seperation of python to multiple so it fits the limit of 1000 lines at mat in one file
-
-Implement OS directly for IP insted of web sockets
-
-🛠️ Next Steps not started yet
-
-Fine-tuning phase 1
-
-Basic next-word prediction from collected data
-
-Fine-tuning phase 2
+- Sprite generation in Screen
 
 ---
 **Version:** 1.0.2 | **Python:** 3.8+ | **Updated:** 14 FEB 2026
