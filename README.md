@@ -1,4 +1,8 @@
-# DEEPWEBER – [![Status](https://img.shields.io/badge/Status-Ongoing-brightgreen)](#status)  [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)  
+Decripted and changed to: [CORSPRITE](https://github.com/Site123456/CORSPRITE)
+
+
+---
+# DEEPWEBER – [![Status](https://img.shields.io/badge/Status-Closed-red)](#status)  [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)  
 ![Demo](demo.gif)
 
 **DEEPWEBER** is a lightweight, high-performance domain crawler designed to discover, verify, analyze and extract domains with minimal setup. It consolidates over 10000 lines of code  while maintaining modularity and reliability.
@@ -88,4 +92,4 @@ Basic next-word prediction from collected data
 Fine-tuning phase 2
 
 ---
-**Version:** 1.0.2 | **Python:** 3.8+ | **Updated:** 07 FEB 2026
+**Version:** 1.0.2 | **Python:** 3.8+ | **Updated:** 14 FEB 2026
